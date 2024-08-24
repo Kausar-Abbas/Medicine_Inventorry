@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="grey">
+  <title>Medical Store Inventory</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="./assets/css/tool.css">
+
+</head>
+
+<body>
+  <div id="loader">
+    <div class="loader"></div>
+  </div>
+  <header class="header">
+    <div class="navbar-wrapper">
+      <div class="container">
+        <nav class="navbar">
+          <ul class="logo">
+            <li><a href="">Logo</a></li>
+          </ul>
+          <div class="hamburger" id="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div><!-- /.hamburger -->
+          <ul class="content-right">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#footer">About</a></li>
+            <li class="button login"><a href="#how">How to use</a></li>
+            <li class="button Sigup"><a href="#footer">Contact us</a></li>
+            <li class="button logout" id="logout" onclick="logout()"><a href="#">
+
+                <span class="material-symbols-outlined">
+                  logout
+                </span>
+                Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+      <nav class="navbar side-bar " id="sidebar">
+        <ul class="content-right-sidebar">
+          <li><a href="">Logo</a></li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#footer">About</a></li>
+          <li class="button login"><a href="#how">How to use</a></li>
+          <li class="button Sigup"><a href="#footer">Contact us</a></li>
+          <li class="logout" id="logout" onclick="logout()"><a href="#">
+
+              <span class="material-symbols-outlined">
+                logout
+              </span>
+              Logout</a></li>
+        </ul>
+      </nav>
+    </div><!-- /.navbar-wrapper -->
+  </header><!-- /.header -->
+  <main class="main">
+    <div class="container">
+      <div class="content-wrapper">
+        <h1 class="heading"  data-aos="fade-up">Medical Store Inventory</h1>
+        <div class="form-content" data-aos="fade-up">
+          <div class="new-record-btn"  data-aos="fade-up">
+            <button id="newRecordBtn">New Record</button>
+          </div><!-- /.new-record-btn -->
+          <div class="form-wrapper">
+            <h1>Details</h1>
+            <form id="medicineForm" class="medicineForm" style="display: none;">
+              <!-- <label for="fileName">File Name:</label> -->
+              <input type="text" placeholder="File Name" id="fileName" name="fileName" required><br>
+              <input type="text" id="date" placeholder="Select a date" onfocus="(this.type='date')"><br>
+              <!-- <label for="name">Medicine Name:</label> -->
+              <input type="text" placeholder="Medicine Name" id="name" name="name" required><br>
+              <!-- <label for="formula">Formula:</label> -->
+              <input type="text" placeholder="Formula" id="formula" name="formula" required><br>
+              <!-- <label for="miligram">Miligram:</label> -->
+              <input type="text" placeholder="Miligram" id="miligram" name="miligram" required><br>
+              <!-- <label for="quantity">Quantity:</label> -->
+              <!-- <input type="text" id="quantity" name="quantity" required><br> -->
+              <input type="number" placeholder="Quantity" id="quantity" name="quantity" required><br>
+              <!-- <button type="submit">Add Medicine</button> -->
+              <input type="submit">
+            </form>
+          </div><!-- /.form-wrapper -->
+        </div><!-- /.form-content -->
+        <h2 class="heading"  data-aos="fade-up">Medicine List</h2>
+        <div class="dropdown-container"  data-aos="fade-up">
+          <select id="medicineDropdown" class="dropdown">
+            <option value="" disabled selected>Select a File</option>
+          </select>
+
+        </div><!-- /.dropdown-container -->
+        <div class="table-container" id="medicineDetails"  data-aos="fade-up">
+          <table id="medicineTable">
+            <thead>
+              <tr>
+                <th>Medicine Name</th>
+                <th>Formula</th>
+                <th>Miligram</th>
+                <th>Quantity</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="download"  data-aos="fade-up">
+          <button class="download-btn" id="downloadPDF">Download PDF</button>
+        </div><!-- /.download -->
+      </div><!-- /.content-wrapper -->
+
+    </div>
+  </main><!-- /.main -->
+  <section class="additional-content" >
+    <div class="container">
+      <h2 class="section-title"  data-aos="fade-up">Why Choose Us</h2>
+      <div class="features-grid">
+        <div class="feature-item"  data-aos="fade-up">
+          <i class="icon fa fa-check-circle"></i>
+          <h3>Easy Management</h3>
+          <p>Effortlessly keep track of all your medicines in one place.</p>
+        </div>
+        <div class="feature-item"  data-aos="fade-up">
+          <i class="icon fa fa-cloud-upload-alt"></i>
+          <h3>Secure Backup</h3>
+          <p>Store your data securely with our cloud backup feature.</p>
+        </div>
+        <div class="feature-item"  data-aos="fade-up">
+          <i class="icon fa fa-clock"></i>
+          <h3>Real-Time Tracking</h3>
+          <p>Get instant updates and notifications about your inventory.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="brand-name"  data-aos="fade-up">
+        <h1>Medical Store Inventory</h1>
+      </div><!-- /.brand-name -->
+      <div class="footer-content-wrapper">
+        <div class="contact-information"  data-aos="fade-up">
+          <h1>About Tool</h1>
+          <p  data-aos="fade-up">This tool is created for the management of the record of the medicines and then you can generate a pdf file
+            and can download it for the data storage. This tool is fully responsive you can use it on all types of devices. <br> <Strong>Thank You</Strong></p>
+        </div><!-- /.contact-information -->
+        <div class="brand-logo-information"  data-aos="fade-up">
+          <h1>Contact Us</h1>
+          <h3>Email : <span> alnoor123@gmail.com</span></h3>
+          <h3>Phone : <span> +9218660979</span></h3>
+          <div class="social-media-links"  data-aos="fade-up">
+            <div class="facebook" style="justify-content: center;">
+              <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M22.675 0h-21.35c-.733 0-1.325.592-1.325 1.325v21.351c0 .732.592 1.324 1.325 1.324h11.488v-9.294h-3.129v-3.622h3.129v-2.672c0-3.1 1.893-4.787 4.656-4.787 1.325 0 2.463.099 2.797.143v3.24l-1.918.001c-1.504 0-1.794.715-1.794 1.764v2.311h3.587l-.467 3.622h-3.12v9.294h6.116c.732 0 1.324-.592 1.324-1.325v-21.351c0-.733-.592-1.325-1.324-1.325z" />
+                </svg>
+
+                facebook</a>
+            </div>
+            <div class="instagram">
+              <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.849.07 1.366.062 2.633.334 3.608 1.31.975.976 1.248 2.243 1.31 3.608.058 1.265.069 1.645.069 4.849s-.012 3.584-.07 4.849c-.062 1.366-.334 2.633-1.31 3.608-.976.975-2.243 1.248-3.608 1.31-1.265.058-1.645.069-4.849.069s-3.584-.012-4.849-.07c-1.366-.062-2.633-.334-3.608-1.31-.975-.976-1.248-2.243-1.31-3.608-.058-1.265-.069-1.645-.069-4.849s.012-3.584.07-4.849c.062-1.366.334-2.633 1.31-3.608.976-.975 2.243-1.248 3.608-1.31 1.265-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-1.406.062-2.986.334-4.064 1.412-1.078 1.078-1.351 2.658-1.412 4.064-.058 1.28-.072 1.688-.072 4.947s.014 3.667.072 4.947c.062 1.406.334 2.986 1.412 4.064 1.078 1.078 2.658 1.351 4.064 1.412 1.28.058 1.688.072 4.947.072s3.667-.014 4.947-.072c1.406-.062 2.986-.334 4.064-1.412 1.078-1.078 1.351-2.658 1.412-4.064.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.062-1.406-.334-2.986-1.412-4.064-1.078-1.078-2.658-1.351-4.064-1.412-1.28-.057-1.688-.072-4.947-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm6.406-11.845c0 .796-.646 1.441-1.441 1.441s-1.441-.645-1.441-1.441.646-1.441 1.441-1.441 1.441.645 1.441 1.441z" />
+                </svg>
+
+                Instagram</a>
+            </div>
+            <div class="whatsapp">
+              <a href="https://wa.me/+923218660979">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.52 3.48a10.438 10.438 0 0 0-7.395-3.48c-5.727 0-10.392 4.665-10.392 10.391 0 1.833.478 3.625 1.394 5.201l-1.499 5.523 5.679-1.488a10.371 10.371 0 0 0 4.818 1.221c5.728 0 10.391-4.665 10.391-10.391a10.435 10.435 0 0 0-3.496-7.387zm-7.395 18.064c-1.662 0-3.294-.431-4.717-1.25l-.34-.195-3.372.882.899-3.287-.214-.35a8.518 8.518 0 0 1-1.333-4.583c0-4.709 3.832-8.541 8.541-8.541a8.49 8.49 0 0 1 6.05 2.491 8.47 8.47 0 0 1 2.491 6.05c-.001 4.709-3.832 8.541-8.542 8.541zm4.716-6.556c-.258-.129-1.528-.754-1.764-.838-.236-.083-.407-.128-.578.129-.172.257-.664.838-.813 1.008-.15.171-.301.193-.558.065-.258-.129-1.088-.4-2.073-1.275-.766-.682-1.284-1.523-1.435-1.781-.15-.258-.016-.397.113-.526.116-.115.258-.3.387-.451.129-.15.172-.257.258-.429.086-.172.043-.322-.021-.451-.065-.129-.578-1.395-.792-1.918-.207-.497-.418-.429-.578-.429-.15 0-.322-.022-.493-.022-.172 0-.45.064-.686.3-.236.257-.902.878-.902 2.141 0 1.262.922 2.484 1.05 2.652.129.172 1.812 2.751 4.401 3.853.616.265 1.096.423 1.472.543.618.197 1.18.169 1.623.103.494-.073 1.528-.625 1.744-1.229.215-.6.215-1.115.15-1.229-.064-.114-.236-.172-.494-.3z" />
+                </svg>
+                Whatsapp</a>
+            </div>
+          </div><!-- /.social-media-links -->
+        </div><!-- /.brand-logo-information -->
+        <div class="feed-back-form"  data-aos="fade-up">
+          <h1>Feedback</h1>
+          <form action="">
+            <div class="contact-name">
+              <input type="text" name="name" placeholder="Usename" required>
+            </div><!-- /.contact-name -->
+            <div class="contact-email">
+              <input type="email" name="email" placeholder="Email" required>
+            </div><!-- /.contact-email -->
+            <div class="contact-message">
+              <!-- <input type="text" name="message" placeholder="Write Something...." required> -->
+              <textarea name="message" id="message" rows="
+               4" cols="44" placeholder="Write Something..."></textarea>
+            </div><!-- /.contact-message -->
+            <input type="submit" value="Send">
+          </form>
+        </div><!-- /.feed-back-form -->
+      </div><!-- /.footer-content-wrapper -->
+    </div><!-- /.container -->
+    <div class="line-footer"></div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Al-Noor Medical Store . All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/login.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1200,
+    });
+  </script>
+</body>
+
+</html>

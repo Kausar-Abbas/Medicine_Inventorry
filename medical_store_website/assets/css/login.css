@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html, body {
+  scroll-behavior: smooth;
+  touch-action: manipulation;
+}
+
+:root {
+  --primary-color: transparent;
+}
+
+:root {
+  /* Color Palette */
+  --soft-black: #2c2c2c;
+  --soft-red: #e57373;
+  --dark-red: #c62828;
+  --red: #ff0000;
+  --light-red: #ff8a80;
+  --soft-gray: #f5f5f5;
+  --light-gray: #e0e0e0;
+  --white: #ffffff;
+
+  /* Gradients */
+  --gradient-black-red: linear-gradient(135deg, #2c2c2c, #c62828);
+  --gradient-red: linear-gradient(135deg, #e57373, #ff8a80);
+
+  /* Text Color */
+  --text-color: var(--soft-gray);
+
+  /* Background Color */
+  --bg-color: var(--soft-black);
+
+  /* Navbar Color */
+  --navbar-color: var(--soft-black);
+  --navbar-text-color: var(--light-red);
+
+  /* Sidebar Color */
+  --sidebar-color: var(--dark-red);
+
+  /* Login Form Color */
+  --login-form-bg: var(--light-gray);
+  --login-form-text: var(--soft-black);
+  --login-form-border: var(--soft-red);
+
+  /* Button Colors */
+  --button-bg: var(--soft-red);
+  --button-text: var(--white);
+  --button-hover-bg: var(--dark-red);
+
+  /* Popup Colors */
+  --popup-bg: var(--light-gray);
+  --popup-text: var(--soft-black);
+  --popup-border: var(--dark-red);
+
+  /* Toast Colors */
+  --toast-bg: var(--soft-red);
+  --toast-text: var(--white);
+  /*hero section color */
+  --section-bg-color: var(--soft-gray);
+  --section-text-color: var(--soft-black);
+
+  --sidebar-color: #4242425f;
+  /* Dark Gray */
+  --sidebar-text-color: #f5f5f5;
+  /* Soft Gray */
+
+
+  /* Footer Colors */
+  --footer-bg: var(--soft-black);
+  --footer-text: var(--light-gray);
+  --footer-link-hover: var(--light-red);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: var(--button-hover-bg);
+  color: var(--button-text);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--gradient-black-red);
+  /* height: 100vh; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  width: 85vw;
+  /* background-color: rgba(255, 255, 255, 0.7); */
+  /* backdrop-filter: blur(8px); */
+  margin: 0 auto;
+}
+
+.navbar-wrapper {
+  width: 100vw;
+  height: auto;
+  background-color: var(--dark-red);
+
+  padding: 10px 40px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  list-style-type: none;
+  margin: 0 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul li a .material-symbols-outlined {
+  margin-right: 10px;
+  font-size: 20px;
+  margin-top: 2px;
+  color: var(--sidebar-text-color);
+
+}
+
+.navbar .logo li a {
+  font-weight: 600;
+  font-size: 30px;
+}
+
+marquee {
+  position: absolute;
+  top: 100px;
+}
+
+marquee span {
+  color: var(--red);
+}
+
+.login-page {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page-wrapper {
+  position: relative;
+}
+
+.login-wrapper {
+  background-color: var(--light-gray);
+  border-radius: 4px;
+  padding: 60px 30px;
+  width: 400px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 13px rgba(0, 0, 0, 0.9);
+}
+
+.login-wrapper h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: var(--soft-black);
+}
+
+.login-wrapper input {
+  margin-bottom: 30px;
+}
+
+.login-wrapper .contact-email {
+  display: flex;
+  position: relative;
+}
+
+.login-wrapper .contact-email svg {
+  position: absolute;
+  right: 0;
+  left: 90%;
+  top: 9px;
+}
+
+#eye-open,
+#eye-close {
+  cursor: pointer;
+}
+
+.login-wrapper input[type="text"],
+input[type="password"] {
+  outline: none;
+  width: 100%;
+  height: 40px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  border: 1px solid var(--light-red);
+  border-radius: 4px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--soft-black);
+}
+
+.login-wrapper input[type="password"] {
+  padding-right: 40px;
+}
+
+.login-wrapper input[type="text"]:focus,
+input[type="password"]:focus {
+  border: 1px solid var(--dark-red);
+}
+
+.login-wrapper input[type="text"]:hover,
+input[type="password"]:hover {
+  border: 1px solid var(--dark-red);
+}
+
+.login-wrapper input[type="submit"] {
+  width: 100%;
+  background-color: var(--light-red);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 10px 10px;
+  margin-top: 10px;
+  color: var(--text-color);
+}
+
+.login-wrapper input[type="submit"]:hover {
+  background-color: var(--dark-red);
+  transition: 0.3s ease;
+}
+
+::placeholder {
+  color: var(--soft-black);
+  margin: 40px;
+}
+
+.login-wrapper .contact-message {
+  margin: 0 0 20px 0;
+}
+
+.login-wrapper .contact-message input {
+  margin: 0px 14px 0 0;
+}
+
+.error-message {
+  color: var(--dark-red);
+  margin-bottom: 10px;
+  display: none;
+}
+
+.sigup-redirect {
+  display: flex;
+  justify-content: center;
+}
+
+.sigup-redirect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sigup-redirect span a {
+  text-decoration: none;
+  color: var(--light-red);
+
+}
+
+.sigup-redirect span a:hover {
+  color: var(--dark-red);
+  transition: 0.3s ease;
+}
+
+.sigup-redirect p {
+  margin-right: 10px;
+}
+
+.success-message{
+  display: none;
+}
+.cpass-error-message{
+  display: none;
+}
+
+.toast-with-timer::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  animation: toast-timer 3s linear;
+}
+
+/* Success - Green line */
+.toast-with-timer.success::after {
+  background: green;
+}
+
+/* Error - Red line */
+.toast-with-timer.error::after {
+  background: red;
+}
+
+@keyframes toast-timer {
+  from { width: 100%; }
+  to { width: 0; }
+}
+
+
+
+
+
+
+/* Loader background */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Black background with 0.7 opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Ensures the loader is on top */
+  /* display: none; */
+
+}
+
+/* Your existing loader styles */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  animation: pulse 1s linear infinite;
+}
+.loader:after {
+  content: '';
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  animation: scaleUp 1s linear infinite;
+}
+
+@keyframes scaleUp {
+  0% { transform: translate(-50%, -50%) scale(0); }
+  60%, 100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes pulse {
+  0%, 60%, 100% { transform: scale(1); }
+  80% { transform: scale(1.2); }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+  }
+
+  .navbar .content-right {
+    display: none;
+  }
+
+  .navbar-wrapper {
+    width: 100vw;
+    height: auto;
+    background-color: var(--dark-red);
+    padding: 2.5px 20px;
+  }
+
+  .navbar ul {
+    align-items: center;
+  }
+
+  .hamburger {
+    display: block;
+    margin-top: 4px;
+  }
+
+  .side-bar {
+    display: flex;
+  }
+
+  .side-bar ul li a {
+    color: var(--sidebar-text-color);
+
+  }
+
+  marquee {
+    top: 60px;
+  }
+
+  .hero-content-wrapper {
+    display: block;
+    padding: 0;
+    margin: 0;
+  }
+
+  .hero-content-left {
+    width: 100%;
+    padding: 15px 10px;
+  }
+
+  .hero-content-left h1 {
+    margin-top: 80px;
+  }
+
+  .hero-content-left p {
+    display: none;
+  }
+
+  .hero-content-right {
+    display: none;
+  }
+
+  .buttons-div {
+    justify-content: center;
+    margin: 40px 0px;
+  }
+
+
+
+
+  .login-wrapper {
+    margin: 10px;
+  }
+
+  .login-wrapper .contact-message {
+    font-size: 12px;
+    display: flex;
+  }
+
+
+  .login-wrapper .contact-email svg {
+    width: 20px;
+    right: 0;
+    left: 88%;
+    top: 7px;
+  }
+
+
+  .login-wrapper input[type="text"],
+  input[type="password"] {
+    height: 35px;
+    font-size: 14px;
+  }
+
+  .login-wrapper input[type="submit"] {
+    font-size: 14px;
+  }
+
+
+  /* .toast {
+    min-width: 250px;
+    max-width: 350px;
+    left: 50%;
+    top: 18%;
+    
+  }
+  .toast-error {
+    min-width: 250px;
+    max-width: 350px;
+    left: 50%;
+    top: 18%;
+    font-size: 10px;
+  }
+  .signup-toast {
+    min-width: 250px;
+    max-width: 350px;
+    left: 50%;
+    top: 18%;
+    font-size: 10px;
+  }
+  .already-toast {
+    min-width: 250px;
+    max-width: 350px;
+    left: 50%;
+    top: 18%;
+    font-size: 10px;
+  }
+     */
+
+
+
+
+}
