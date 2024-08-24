@@ -11,7 +11,7 @@ hamburger.addEventListener('click', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', () => { 
+document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('medicineForm');
   const newRecordBtn = document.getElementById('newRecordBtn');
   const medicineDropdown = document.getElementById('medicineDropdown');
@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     currentFileName = ''; // Reset current file name on page load
   };
-  
+
   const renderTable = (fileName) => {
     const records = medicines[fileName] || [];
     medicineTableBody.innerHTML = '';
@@ -185,10 +185,10 @@ document.addEventListener('DOMContentLoaded', () => {
   renderMedicines();
 });
 
-window.addEventListener('load', function() {
-  setTimeout(function() {
+window.addEventListener('load', function () {
+  setTimeout(function () {
     document.getElementById('loader').style.display = 'none';
-  }, 1000); 
+  }, 1000);
 });
 
 // Toastify function with animated bottom line and custom positioning

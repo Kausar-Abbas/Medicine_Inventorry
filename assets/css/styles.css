@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-html, body {
+
+html,
+body {
   scroll-behavior: smooth;
   touch-action: manipulation;
 }
@@ -86,6 +88,7 @@ html, body {
 body {
   font-family: 'Poppins', sans-serif;
 }
+
 body.no-scroll {
   overflow: hidden;
 }
@@ -443,38 +446,44 @@ td {
   transition: 0.25s ease-in;
 }
 
-.hero-section-wrapper{
-  background-color:var(--soft-black);
+.hero-section-wrapper {
+  background-color: var(--soft-black);
 }
-.how-to-use-wrapper{
+
+.how-to-use-wrapper {
   text-align: center;
   padding: 40px 90px;
   color: var(--light-gray);
 }
-.how-to-use-steps{
+
+.how-to-use-steps {
   margin: 50px 0;
 }
-.how-to-use-wrapper .how-to-use-steps h1{
+
+.how-to-use-wrapper .how-to-use-steps h1 {
   color: var(--light-gray);
   font-size: 50px;
 }
-.how-to-use-wrapper .how-to-use-steps h3{
+
+.how-to-use-wrapper .how-to-use-steps h3 {
   text-align: start;
   margin-bottom: 10px;
   font-size: 30px;
 }
-.how-to-use-wrapper .how-to-use-steps p{
+
+.how-to-use-wrapper .how-to-use-steps p {
   text-align: start;
   margin-bottom: 10px;
   font-size: 20px;
 }
 
-.signup-page-container{
-  max-width:100%;
+.signup-page-container {
+  max-width: 100%;
   background-color: transparent;
 }
-.signup-page-container img{
-  max-width:100%;
+
+.signup-page-container img {
+  max-width: 100%;
   border: 1px solid var(--light-gray);
 }
 
@@ -592,6 +601,7 @@ td {
   text-align: center;
   color: var(--light-red);
 }
+
 .footer .brand-logo-information h3 span {
   color: var(--light-gray);
   font-weight: 100;
@@ -607,7 +617,7 @@ td {
 .footer .contact-information h1{
   background-color: gold;
 } */
-.footer .contact-information p{
+.footer .contact-information p {
   text-align: center;
   font-size: 20px;
   margin-top: 20px;
@@ -621,15 +631,18 @@ td {
   box-shadow: 0 0 13px rgba(0, 0, 0, 0.9);
   padding: 30px 50px;
 }
-.footer .feed-back-form h1{
+
+.footer .feed-back-form h1 {
   padding: 30px 80px;
   font-size: 30px;
   font-weight: bold;
   color: var(--soft-black);
 }
-.feed-back-form input{
+
+.feed-back-form input {
   margin-bottom: 30px;
 }
+
 .feed-back-form input[type="text"],
 input[type="email"],
 textarea {
@@ -650,24 +663,27 @@ textarea {
   appearance: none;
   color: var(--soft-black);
 }
+
 .feed-back-form input[type="text"]:focus,
 input[type="email"]:focus,
 textarea {
   border: 1px solid var(--dark-red);
 }
+
 .feed-back-form input[type="text"]:hover,
 input[type="email"]:hover,
-textarea{
+textarea {
   border: 1px solid var(--dark-red);
 }
 
-textarea{
+textarea {
   height: 100px;
-  resize: vertical; 
+  resize: vertical;
 }
+
 .feed-back-form input[type="submit"] {
   width: 100%;
-  background-color:var(--light-red);
+  background-color: var(--light-red);
   border: none;
   border-radius: 4px;
   cursor: pointer;
@@ -676,11 +692,13 @@ textarea{
   margin-top: 10px;
   color: var(--text-color);
 }
+
 .feed-back-form input[type="submit"]:hover {
   background-color: var(--dark-red);
   transition: 0.3s ease;
 }
-::placeholder{
+
+::placeholder {
   color: var(--soft-black);
   margin: 40px;
 }
@@ -700,37 +718,45 @@ textarea{
   font-size: 20px;
   width: 100%;
 }
+
 .social-media-links {
-  margin:  0 auto;
-  
+  margin: 0 auto;
+
 }
-.social-media-links a{
+
+.social-media-links a {
   text-decoration: none;
   color: var(--light-gray);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.social-media-links a:hover{
+
+.social-media-links a:hover {
   color: var(--dark-red);
   transition: 0.3s ease;
 }
-.social-media-links a svg{
+
+.social-media-links a svg {
   text-decoration: none;
   /* color: var(--light-red); */
   margin-right: 10px;
 }
-.social-media-links a svg:hover{
+
+.social-media-links a svg:hover {
   color: var(red);
   margin-right: 10px;
 }
-.social-media-links .facebook{
+
+.social-media-links .facebook {
   margin: 20px 0;
 }
-.social-media-links .instagram{
+
+.social-media-links .instagram {
   margin-bottom: 20PX;
 }
-.social-media-links .whatsapp{
+
+.social-media-links .whatsapp {
   margin-bottom: 20PX;
 }
 
@@ -750,11 +776,13 @@ textarea{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7); /* Black background with 0.7 opacity */
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Black background with 0.7 opacity */
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Ensures the loader is on top */
+  z-index: 9999;
+  /* Ensures the loader is on top */
   /* display: none; */
 
 }
@@ -770,6 +798,7 @@ textarea{
   position: relative;
   animation: pulse 1s linear infinite;
 }
+
 .loader:after {
   content: '';
   position: absolute;
@@ -786,13 +815,27 @@ textarea{
 }
 
 @keyframes scaleUp {
-  0% { transform: translate(-50%, -50%) scale(0); }
-  60%, 100% { transform: translate(-50%, -50%) scale(1); }
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  60%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
 }
 
 @keyframes pulse {
-  0%, 60%, 100% { transform: scale(1); }
-  80% { transform: scale(1.2); }
+
+  0%,
+  60%,
+  100% {
+    transform: scale(1);
+  }
+
+  80% {
+    transform: scale(1.2);
+  }
 }
 
 
@@ -860,28 +903,32 @@ textarea{
     justify-content: center;
     margin: 40px 0px;
   }
-  .how-to-use-wrapper{
+
+  .how-to-use-wrapper {
     padding: 20px;
   }
-  .how-to-use-wrapper .how-to-use-steps h1{
+
+  .how-to-use-wrapper .how-to-use-steps h1 {
     font-size: 35px;
     text-align: center;
   }
-  .how-to-use-wrapper .how-to-use-steps h3{
+
+  .how-to-use-wrapper .how-to-use-steps h3 {
     text-align: center;
     margin-bottom: 10px;
     font-size: 20px;
   }
-  .how-to-use-wrapper .how-to-use-steps p{
+
+  .how-to-use-wrapper .how-to-use-steps p {
     text-align: center;
     margin-bottom: 10px;
     font-size: 15px;
   }
-  .hero-section-wrapper .container{
+
+  .hero-section-wrapper .container {
     width: 100vw;
 
   }
-  
 
 
 
@@ -891,9 +938,11 @@ textarea{
 
 
 
-  .additional-content{
+
+  .additional-content {
     padding: 40px 0;
   }
+
   .features-grid {
     flex-direction: column;
     align-items: center;
@@ -903,6 +952,7 @@ textarea{
     width: 80%;
     margin-bottom: 20px;
   }
+
   .footer .brand-logo-information,
   .footer .contact-information,
   .footer .feed-back-form {
@@ -915,18 +965,21 @@ textarea{
   .footer .brand-name h1 {
     font-size: 20px;
   }
+
   .footer .feed-back-form {
     padding: 15px 15px;
     height: auto;
   }
-  .footer .feed-back-form h1{
+
+  .footer .feed-back-form h1 {
     padding: 20px 0;
   }
 
   .footer .brand-logo-information h3 {
-    text-align:center;
+    text-align: center;
     text-wrap: nowrap;
   }
+
   .footer-bottom {
     font-size: 16px;
   }
